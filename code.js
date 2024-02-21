@@ -182,7 +182,7 @@ function toggleModeBlue() {
         img.setAttribute('src','./assets/img/Blue - Sem Código.png');
         alura.setAttribute('src', './assets/img/alura azul.png');
         oracle.setAttribute('src', './assets/img/oracle logo/blue logo oracle.png');
-        audio.setAttribute('src', './assets/audios/Sonic Lofi.mp3');
+        audio.setAttribute('src', './assets/audios/sonic.mp3');
     }
 }
 
