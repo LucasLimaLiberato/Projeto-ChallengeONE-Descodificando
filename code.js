@@ -19,7 +19,15 @@ function printClickCrip() {
     console.log(variavel);
     textoDaArea = variavel;
 
-    if (!variavel!==true) {
+    var regex = /^[a-z\s]+$/;
+    
+    if (!regex.test(variavel)) {
+        variavel = ""
+        textareaBorda.style.border = "5px solid red";
+        setTimeout(function() { 
+        textareaBorda.style.border = estiloAntigo;
+        }, 500);
+    } else if (!variavel!==true) {
         let campoVisualizacaoON = document.getElementById("visualizacao_texto")
         campoVisualizacaoON.style.display = "none";
 
@@ -87,8 +95,15 @@ function printClickDes() {
     variavel = texto.value;
     textoDaArea = variavel;
 
-    if (!variavel==false) {
-
+    var regex = /^[a-z\s]+$/;
+    
+    if (!regex.test(variavel)) {
+        variavel = ""
+        textareaBorda.style.border = "5px solid red";
+        setTimeout(function() { 
+        textareaBorda.style.border = estiloAntigo;
+        }, 500);
+    } else if (!variavel==false) {
         if (!variavel!==true) {
             let campoVisualizacaoON = document.getElementById("visualizacao_texto")
             campoVisualizacaoON.style.display = "none";
@@ -110,7 +125,6 @@ function printClickDes() {
                 })}
             
             botaoCopia.addEventListener("click", function() {
-                copiaOTexto();
             });
         }
     }
@@ -128,19 +142,6 @@ function printClickDes() {
 cbtn_crip.addEventListener('click', printClickCrip);
 cbtn_desc.addEventListener('click', printClickDes);
 
-confereTextarea.addEventListener("keypress", function(e) {
-    var codigo = e.keyCode || e.which;
-    var caractere = String.fromCharCode(codigo);
-    var regex = new RegExp("[a-z\\s]+");
-    
-    if (!regex.test(caractere)) {
-        e.preventDefault();
-        textareaBorda.style.border = "5px solid red";
-        setTimeout(function() { 
-        textareaBorda.style.border = estiloAntigo;
-        }, 500);
-    }
-  });
 
 const html = document.documentElement;
 
