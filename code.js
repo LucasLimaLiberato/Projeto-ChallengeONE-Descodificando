@@ -1,7 +1,7 @@
 let cbtn_crip = document.querySelector('#click_criptografar');
 let cbtn_desc = document.querySelector('#click_descriptografar');
 
-let div_textoCrip = document.getElementById("visualizacao_texto-texto_crip-paragrafo")
+let div_textoCrip = document.getElementById("visualizacao_texto-texto_crip-paragrafo");
 
 let confereTextarea = document.getElementById("manipulacao_texto-area_de_digitacao");
 let textareaBorda = document.getElementById("manipulacao_texto-area_de_digitacao");
@@ -27,6 +27,13 @@ function printClickCrip() {
         setTimeout(function() { 
         textareaBorda.style.border = estiloAntigo;
         }, 500);
+
+        let campoVisualizacaoON = document.getElementById("visualizacao_texto")
+        campoVisualizacaoON.style.display = "flex";
+
+        let campoVisualizacaoOF = document.getElementById("visualizacao_texto-oculta")
+        campoVisualizacaoOF.style.display = "none";
+
     } else if (!variavel!==true) {
         let campoVisualizacaoON = document.getElementById("visualizacao_texto")
         campoVisualizacaoON.style.display = "none";
@@ -82,10 +89,10 @@ function printClickCrip() {
     }   
 
     else {
-        let campoVisualizacaoON = document.getElementById("visualizacao_texto")
+        let campoVisualizacaoON = document.getElementById("visualizacao_texto");
         campoVisualizacaoON.style.display = "flex";
 
-        let campoVisualizacaoOF = document.getElementById("visualizacao_texto-oculta")
+        let campoVisualizacaoOF = document.getElementById("visualizacao_texto-oculta");
         campoVisualizacaoOF.style.display = "none";
     }
 }
@@ -103,6 +110,13 @@ function printClickDes() {
         setTimeout(function() { 
         textareaBorda.style.border = estiloAntigo;
         }, 500);
+
+        let campoVisualizacaoON = document.getElementById("visualizacao_texto")
+        campoVisualizacaoON.style.display = "flex";
+
+        let campoVisualizacaoOF = document.getElementById("visualizacao_texto-oculta")
+        campoVisualizacaoOF.style.display = "none";
+        
     } else if (!variavel==false) {
         if (!variavel!==true) {
             let campoVisualizacaoON = document.getElementById("visualizacao_texto")
@@ -118,7 +132,7 @@ function printClickDes() {
             novoTexto = novoTexto.replace(/ufat/g, 'u');
 
             div_textoCrip.innerHTML = novoTexto;
-            textoDaArea = novoTexto
+            textoDaArea = novoTexto;
 
             function copiaOTexto(){
                 navigator.clipboard.writeText(textoDaArea).then( () => {
@@ -146,8 +160,8 @@ cbtn_desc.addEventListener('click', printClickDes);
 const html = document.documentElement;
 
 function toggleModePink() {
-    html.classList.remove("yellow")
-    html.classList.remove("blue")
+    html.classList.remove("yellow");
+    html.classList.remove("blue");
     html.classList.add("pink");
 
     const video = document.querySelector('#primeira_secao video');
@@ -159,16 +173,16 @@ function toggleModePink() {
     if (html.classList.contains('pink')) {
 
         video.setAttribute('src', './assets/videos/pink_background_video.mp4');
-        img.setAttribute('src','./assets/img/Red - Sem Código.png')
-        alura.setAttribute('src', './assets/img/alura pink.png')
+        img.setAttribute('src','./assets/img/Red - Sem Código.png');
+        alura.setAttribute('src', './assets/img/alura pink.png');
         oracle.setAttribute('src', './assets/img/oracle logo/pink logo oracle.png');
         audio.setAttribute('src', './assets/audios/Marvel & Miles.mp3');
     }
 }
 
 function toggleModeBlue() {
-    html.classList.remove("pink")
-    html.classList.remove("yellow")
+    html.classList.remove("pink");
+    html.classList.remove("yellow");
     html.classList.add("blue");
 
     const video = document.querySelector('#primeira_secao video');
@@ -188,8 +202,8 @@ function toggleModeBlue() {
 }
 
 function toggleModeYellow() {
-    html.classList.remove("pink")
-    html.classList.remove("blue")
+    html.classList.remove("pink");
+    html.classList.remove("blue");
     html.classList.add("yellow");
 
     const video = document.querySelector('#primeira_secao video');
@@ -208,23 +222,24 @@ function toggleModeYellow() {
     }
 }
 
+const audioElement = document.querySelector('body audio'); 
+const buttonElement = document.querySelector('#switch button');
 
+audioElement.play();
 
 function toggleMode() {
-    const audioElement = document.querySelector('body audio'); 
-    const buttonElement = document.querySelector('#switch button');
 
     if (!audioElement.paused) {
         audioElement.pause(); 
         buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio muted.gif")';
-    } else {
-        audioElement.play();
-        if (html.classList.contains("pink")) {
-            buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio pink.gif")';
-        } else if (html.classList.contains("blue")) {
-            buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio blue.gif")';
-        } else if (html.classList.contains("yellow")) {
-            buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio yellow.gif")';
+        } else {
+            audioElement.play();
+            if (html.classList.contains("pink")) {
+                buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio pink.gif")';
+            } else if (html.classList.contains("blue")) {
+                buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio blue.gif")';
+            } else if (html.classList.contains("yellow")) {
+                buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio yellow.gif")';
+            }
         }
-    }
 }
