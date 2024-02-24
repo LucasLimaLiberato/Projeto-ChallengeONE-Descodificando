@@ -158,8 +158,6 @@ cbtn_desc.addEventListener('click', printClickDes);
 const audioElement = document.querySelector('body audio'); 
 const buttonElement = document.querySelector('#switch button');
 
-audioElement.play();
-
 const html = document.documentElement;
 
 function toggleModePink() {
