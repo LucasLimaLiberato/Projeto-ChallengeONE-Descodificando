@@ -116,7 +116,7 @@ function printClickDes() {
 
         let campoVisualizacaoOF = document.getElementById("visualizacao_texto-oculta")
         campoVisualizacaoOF.style.display = "none";
-        
+
     } else if (!variavel==false) {
         if (!variavel!==true) {
             let campoVisualizacaoON = document.getElementById("visualizacao_texto")
@@ -155,7 +155,10 @@ function printClickDes() {
 
 cbtn_crip.addEventListener('click', printClickCrip);
 cbtn_desc.addEventListener('click', printClickDes);
+const audioElement = document.querySelector('body audio'); 
+const buttonElement = document.querySelector('#switch button');
 
+audioElement.play();
 
 const html = document.documentElement;
 
@@ -177,6 +180,7 @@ function toggleModePink() {
         alura.setAttribute('src', './assets/img/alura pink.png');
         oracle.setAttribute('src', './assets/img/oracle logo/pink logo oracle.png');
         audio.setAttribute('src', './assets/audios/Marvel & Miles.mp3');
+        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio pink.gif")'
     }
 }
 
@@ -198,6 +202,7 @@ function toggleModeBlue() {
         alura.setAttribute('src', './assets/img/alura azul.png');
         oracle.setAttribute('src', './assets/img/oracle logo/blue logo oracle.png');
         audio.setAttribute('src', './assets/audios/sonic.mp3');
+        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio blue.gif")'
     }
 }
 
@@ -219,13 +224,9 @@ function toggleModeYellow() {
         alura.setAttribute('src', './assets/img/alura laranja.png');
         oracle.setAttribute('src', './assets/img/oracle logo/yellow logo oracle.png');
         audio.setAttribute('src', './assets/audios/STRAY Lofi + Cyberpunk.mp3');
+        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio yellow.gif")'
     }
 }
-
-const audioElement = document.querySelector('body audio'); 
-const buttonElement = document.querySelector('#switch button');
-
-audioElement.play();
 
 function toggleMode() {
 
