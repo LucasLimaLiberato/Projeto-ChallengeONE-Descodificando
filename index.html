@@ -17,7 +17,7 @@
     <title>DECODIFICANDO</title>
 </head>
 <body>
-    <audio src="./assets/audios/Marvel & Miles.mp3" type="audio/mp3" autoplay></audio>
+    <audio id="musica" src="./assets/audios/Marvel & Miles.mp3" type="audio/mp3" autoplay></audio>
     <div id="conteudo">
         <header>
             <a href="https://www.alura.com.br/" target="_blank"><img class="logoAlura" src="./assets/img/alura pink.png" alt="Logo da Alura: um a estiloso"></a>
@@ -33,8 +33,14 @@
                 </li>
             </ul>
 
-            <div id="switch">
-                <button  onclick="toggleMode()"></button>
+            <div id="controlador_de_som">
+                <div id="switch">
+                    <button  onclick="toggleMode()"></button>
+                </div>
+                <ul id="volume" style="list-style: none;">
+                    <button onclick="aumentarVolume()" class="volume_botao">+</button>
+                    <button onclick="diminuirVolume()" class="volume_botao">-</button>
+                </ul>
             </div>
         </header>
 

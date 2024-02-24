@@ -168,6 +168,12 @@ header {
     width: 10px;
 }
 
+#controlador_de_som {
+    display: flex;
+    align-items: center;
+    margin: 20px 14px 10px 0px;
+}
+
 #switch button {
     padding: 10px 30px;
     border-radius: 10px;
@@ -178,13 +184,30 @@ header {
     background: var(--gif-audio) no-repeat top center/cover;
     box-shadow: 5px 5px 5px rgba( 0, 0, 0, 0.4);
 
-    margin: 20px 30px 10px 0px;
+    margin: 0px;
 }
 
 #switch button:hover {
     border: 4px solid var(--cor-padrao);
 
     box-shadow: 0px;
+}
+
+#volume {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.volume_botao {
+    background-color: var(--cor-padrao);
+    color: white;
+    padding: 0px 3px;
+}
+
+.volume_botao:active {
+    background-color: rgba( 0, 0, 0, 0.6);
+    color: var(--cor-padrao);
 }
 
 
@@ -414,7 +437,6 @@ main {
     border-radius: 15px;
     font-size: 1em;
     font-family: var(--font-type-paragrafo-principal);
-    border: none;
 
     background-color: var(--cor-padrao);
     color: white;
