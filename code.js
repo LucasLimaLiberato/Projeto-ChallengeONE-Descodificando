@@ -48,29 +48,19 @@ function printClickCrip() {
             if (textoDaArea[i]=="e") {
                 textoDaArea[i]--;
                 novaFrase += "enter";
-            } 
-
-            if (textoDaArea[i]=="i") {
+            } else if (textoDaArea[i]=="i") {
                 textoDaArea[i] = "";
                 novaFrase += "imes";
-            } 
-
-            if (textoDaArea[i]=="a") {
+            } else if (textoDaArea[i]=="a") {
                 textoDaArea[i]--;
                 novaFrase += "ai";
-            } 
-
-            if (textoDaArea[i]=="o") {
+            } else if (textoDaArea[i]=="o") {
                 textoDaArea[i]--;
                 novaFrase += "ober";
-            }
-
-            if (textoDaArea[i]=="u") {
+            } else if (textoDaArea[i]=="u") {
                 textoDaArea[i]--;
                 novaFrase += "ufat";
-            } 
-            
-            if (textoDaArea[i]!='a' && textoDaArea[i]!='e' && textoDaArea[i]!='i' && textoDaArea[i]!='o' && textoDaArea[i]!='u'){
+            } else {
                 novaFrase += textoDaArea[i];
             }
             
