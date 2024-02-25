@@ -30,8 +30,8 @@
     --font-type-titulo-principal: 'DOCALLISME';
     --font-type-paragrafo-principal: "Permanent Marker", cursive;
     --font-syze-titulo-principal: 150px;
-    --font-syze-titulo-principal-hover: 4em;
-    --font-syze-titulo-principal-hover2: 2.8em;
+    --font-syze-titulo-principal-media: 4em;
+    --font-syze-titulo-principal-media2: 2.8em;
     --font-syze-aviso: 0.8em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio pink.gif");
     
@@ -43,8 +43,8 @@
     --font-type-titulo-principal: 'DOCALLISME';
     --font-type-paragrafo-principal: "Permanent Marker", cursive;
     --font-syze-titulo-principal: 150px;
-    --font-syze-titulo-principal-hover: 4em;
-    --font-syze-titulo-principal-hover2: 2.8em;
+    --font-syze-titulo-principal-media: 4em;
+    --font-syze-titulo-principal-media2: 2.8em;
     --font-syze-aviso: 0.8em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio pink.gif");
 }
@@ -54,9 +54,9 @@
     --cor-padrao: #214096;
     --font-type-titulo-principal: 'SEGA';
     --font-type-paragrafo-principal:  "Protest Strike", sans-serif;
-    --font-syze-titulo-principal: 5.9em;
-    --font-syze-titulo-principal-hover: 4em;
-    --font-syze-titulo-principal-hover2: 1.5em;
+    --font-syze-titulo-principal: 5.3em;
+    --font-syze-titulo-principal-media: 4em;
+    --font-syze-titulo-principal-media2: 1.5em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio blue.gif");
 }
 
@@ -66,8 +66,8 @@
     --font-type-titulo-principal: 'CYBORG';
     --font-type-paragrafo-principal:  "Kode Mono", monospace;
     --font-syze-titulo-principal: 4em;
-    --font-syze-titulo-principal-hover: 2.8em;
-    --font-syze-titulo-principal-hover2: 1em;
+    --font-syze-titulo-principal-media: 2.8em;
+    --font-syze-titulo-principal-media2: 1em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio yellow.gif");
 }
 
@@ -519,7 +519,7 @@ footer {
     }
 
     #primeira_secao-descricao_do_projeto h1 {
-        font-size: var(--font-syze-titulo-principal-hover);
+        font-size: var(--font-syze-titulo-principal-media);
     }
     
     #primeira_secao-descricao_do_projeto p {
@@ -607,7 +607,7 @@ footer {
     }
 
     #primeira_secao-descricao_do_projeto h1 {
-        font-size: var(--font-syze-titulo-principal-hover2);
+        font-size: var(--font-syze-titulo-principal-media2);
         color: white;
     }
 
