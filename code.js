@@ -16,7 +16,6 @@ let cbtn_save = document.querySelector("#visualizacao_texto-botoes-botao-save");
 function printClickCrip() {
     let texto = document.querySelector('textarea');
     variavel = texto.value;
-    console.log(variavel);
     textoDaArea = variavel;
 
     var regex = /^[a-z\s]+$/;
@@ -169,7 +168,7 @@ function toggleModePink() {
         alura.setAttribute('src', './assets/img/alura pink.png');
         oracle.setAttribute('src', './assets/img/oracle logo/pink logo oracle.png');
         audio.setAttribute('src', './assets/audios/Marvel & Miles.mp3');
-        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio pink.gif")'
+        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio pink.gif")';
     }
 }
 
@@ -191,7 +190,7 @@ function toggleModeBlue() {
         alura.setAttribute('src', './assets/img/alura azul.png');
         oracle.setAttribute('src', './assets/img/oracle logo/blue logo oracle.png');
         audio.setAttribute('src', './assets/audios/sonic.mp3');
-        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio blue.gif")'
+        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio blue.gif")';
     }
 }
 
@@ -213,7 +212,7 @@ function toggleModeYellow() {
         alura.setAttribute('src', './assets/img/alura laranja.png');
         oracle.setAttribute('src', './assets/img/oracle logo/yellow logo oracle.png');
         audio.setAttribute('src', './assets/audios/STRAY Lofi + Cyberpunk.mp3');
-        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio yellow.gif")'
+        buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio yellow.gif")';
     }
 }
 
