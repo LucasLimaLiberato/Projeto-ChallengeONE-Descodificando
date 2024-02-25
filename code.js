@@ -245,18 +245,18 @@ function toggleMode() {
 
 function diminuirVolume() {
     var musica = document.getElementById("musica");
-    if (musica.volume >= 0.05) { // Verifica se o volume é maior ou igual a 0.05 para evitar valores negativos
-        musica.volume -= 0.05; // Diminui o volume em 0.05
+    if (musica.volume >= 0.05) {
+        musica.volume -= 0.05;
     } else {
-        musica.volume = 0; // Define o volume como 0 se for menor que 0.05
+        musica.volume = 0;
     }
 }
 
 function aumentarVolume() {
     var musica = document.getElementById("musica");
-    if (musica.volume <= 0.95) { // Verifica se o volume é maior ou igual a 0.05 para evitar valores negativos
-        musica.volume += 0.05; // Diminui o volume em 0.05
+    if (musica.volume <= 0.95) {
+        musica.volume += 0.05; 
     } else {
-        musica.volume = 1; // Define o volume como 0 se for menor que 0.05
+        musica.volume = 1;
     }
 }
