@@ -147,6 +147,12 @@ cbtn_crip.addEventListener('click', printClickCrip);
 cbtn_desc.addEventListener('click', printClickDes);
 const audioElement = document.querySelector('body audio'); 
 const buttonElement = document.querySelector('#switch button');
+const video = document.querySelector('#primeira_secao video');
+const img = document.querySelector('#visualizacao_texto img');
+const alura = document.querySelector('header img');
+const oracle = document.querySelector('footer img');
+const audio = document.querySelector('body audio');
+const buttonBack = document.querySelectorAll("#lixeira");
 
 const html = document.documentElement;
 
@@ -156,10 +162,6 @@ function toggleModePink() {
     html.classList.add("pink");
 
     const video = document.querySelector('#primeira_secao video');
-    const img = document.querySelector('#visualizacao_texto img');
-    const alura = document.querySelector('header img');
-    const oracle = document.querySelector('footer img');
-    const audio = document.querySelector('body audio');
 
     if (html.classList.contains('pink')) {
 
@@ -169,6 +171,7 @@ function toggleModePink() {
         oracle.setAttribute('src', './assets/img/oracle logo/pink logo oracle.png');
         audio.setAttribute('src', './assets/audios/Marvel & Miles.mp3');
         buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio pink.gif")';
+        buttonBack.style.backgroundImage = 'url("./assets/img/lixeira/lixeiraPink.png")';
     }
 }
 
@@ -176,12 +179,6 @@ function toggleModeBlue() {
     html.classList.remove("pink");
     html.classList.remove("yellow");
     html.classList.add("blue");
-
-    const video = document.querySelector('#primeira_secao video');
-    const img = document.querySelector('#visualizacao_texto img');
-    const alura = document.querySelector('header img');
-    const oracle = document.querySelector('footer img');
-    const audio = document.querySelector('body audio');
 
     if (html.classList.contains('blue')) {
 
@@ -191,6 +188,7 @@ function toggleModeBlue() {
         oracle.setAttribute('src', './assets/img/oracle logo/blue logo oracle.png');
         audio.setAttribute('src', './assets/audios/sonic.mp3');
         buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio blue.gif")';
+        buttonBack.style.backgroundImage = 'url("./assets/img/lixeira/lixeiraBlue.png")';
     }
 }
 
@@ -198,12 +196,6 @@ function toggleModeYellow() {
     html.classList.remove("pink");
     html.classList.remove("blue");
     html.classList.add("yellow");
-
-    const video = document.querySelector('#primeira_secao video');
-    const img = document.querySelector('#visualizacao_texto img');
-    const alura = document.querySelector('header img');
-    const oracle = document.querySelector('footer img');
-    const audio = document.querySelector('body audio');
 
     if (html.classList.contains('yellow')) {
 
@@ -213,6 +205,7 @@ function toggleModeYellow() {
         oracle.setAttribute('src', './assets/img/oracle logo/yellow logo oracle.png');
         audio.setAttribute('src', './assets/audios/STRAY Lofi + Cyberpunk.mp3');
         buttonElement.style.backgroundImage = 'url("./assets/gifs/gifs audio/animation audio yellow.gif")';
+        buttonBack.style.backgroundImage = 'url("./assets/img/lixeira/lixeiraOrange.png")';
     }
 }
 
@@ -250,3 +243,13 @@ function aumentarVolume() {
         musica.volume = 1;
     }
 }
+
+const botaoLixeira = document.getElementById("lixeira");;
+
+function lixeiraClick(){
+    confereTextarea.value = "";
+}
+
+botaoLixeira.addEventListener("click", function() {
+    lixeiraClick();
+});

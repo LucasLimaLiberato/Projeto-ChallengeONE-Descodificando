@@ -34,6 +34,8 @@
     --font-syze-titulo-principal-media2: 2.8em;
     --font-syze-aviso: 0.8em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio pink.gif");
+    --background-lixeira: url("./assets/img/lixeira/lixeiraPink.png");
+    --background-lixeira-animado: url("./assets/gifs/gifs lixeira/gif lixeira pink.gif");
     
 }
 
@@ -47,6 +49,8 @@
     --font-syze-titulo-principal-media2: 2.8em;
     --font-syze-aviso: 0.8em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio pink.gif");
+    --background-lixeira: url("./assets/img/lixeira/lixeiraPink.png");
+    --background-lixeira-animado: url("./assets/gifs/gifs lixeira/gif lixeira pink.gif");
 }
 
 .blue {
@@ -58,6 +62,8 @@
     --font-syze-titulo-principal-media: 4em;
     --font-syze-titulo-principal-media2: 1.5em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio blue.gif");
+    --background-lixeira: url("./assets/img/lixeira/lixeiraBlue.png");
+    --background-lixeira-animado: url("./assets/gifs/gifs lixeira/gif lixeira blue.gif");
 }
 
 .yellow {
@@ -69,6 +75,8 @@
     --font-syze-titulo-principal-media: 2.8em;
     --font-syze-titulo-principal-media2: 1em;
     --gif-audio: url("./assets/gifs/gifs audio/animation audio yellow.gif");
+    --background-lixeira: url("./assets/img/lixeira/lixeiraOrange.png");
+    --background-lixeira-animado: url("./assets/gifs/gifs lixeira/gif lixeira orange.gif");
 }
 
 
@@ -308,12 +316,21 @@ main {
     font-family: var(--font-type-paragrafo-principal);
 }
 
+#controle_texto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba( 0, 0, 0, 0.4);
+    justify-content: center;
+    gap: 30px;
+
+    height: 150px;
+}
+
 #manipulacao_texto-botoes {
     display: flex;
     gap: 30px;
     justify-content: center;
-    padding: 40px;
-    background-color: rgba( 0, 0, 0, 0.4);
     position: relative;
 }
 
@@ -343,6 +360,23 @@ main {
     color: var(--cor-padrao);
 }
 
+#lixeira {
+
+    padding: 20px;
+    border-radius: 50%;
+    background: var(--background-lixeira) no-repeat top center/cover;
+
+}
+
+#lixeira:hover {
+    margin: 0px;
+    background: var(--background-lixeira-animado) no-repeat top center/cover;
+    outline: 5px solid var(--cor-padrao);
+}
+
+#lixeira:active {
+    outline: 5px solid red;
+}
 
 /*VISUALIZAÇÃO DO TEXTO CRIPTOGRAFADO OU DESCRIPTOGRAFADO*/
 #visualizacao_texto {
@@ -553,6 +587,14 @@ footer {
         border-radius: 10px;
     }
 
+    #click_criptografar {
+        padding: 13px 50px;
+    }
+    
+    #click_descriptografar {
+        padding: 13px 50px;
+    }
+
     #visualizacao_texto {
         width: 100%;
         height: 100%;
@@ -613,6 +655,14 @@ footer {
 
     #conteudo {
         width: auto;
+    }
+
+
+    #controle_texto {
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+    
     }
 
     #click_criptografar {
