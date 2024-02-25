@@ -139,6 +139,7 @@ function printClickDes() {
                 })}
             
             botaoCopia.addEventListener("click", function() {
+                copiaOTexto();
             });
         }
     }
